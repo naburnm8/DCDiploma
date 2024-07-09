@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+from products.models import Product
+
 
 class Cart(models.Model):
     STATUS_CHOICES = [(0, "Создаётся"), (1, "Оплачен"), (2, "Доставлен")]
