@@ -3,4 +3,4 @@ from django.db import models
 
 
 class User(AbstractUser):
-    adress = models.TextField(null=True, blank=True)
+    user_address = models.TextField(null=True, blank=True)
