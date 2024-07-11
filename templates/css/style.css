@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFE2B0;
+    height: 1500px;
+}
+
+header {
+    
+    text-align: center;
+    margin-bottom: 20px;
+    background-attachment: fixed;
+    
+}
+
+.logo {
+    height: 100px;
+    width: 200px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0px;
+}
+
+li {
+    display: inline;
+    margin-right: 100px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+a:hover {
+    color: whitesmoke;
+    font-size: 50px;
+}
+
+li:last-child {
+    margin-right: 0px;
+}
+
+nav {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #FFE2B0;
+    padding: 10px 0; 
+    z-index: 1000; 
+}
+
+.section-about {
+    height: 640px;
+    background: url(../img/01-Картинка-фона.jpg) center/cover no-repeat;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.section-about__block {
+    width: 420px;
+    height: 190px;
+    background: linear-gradient(180deg, rgba(244,213,178,0.8) 0%, rgba(234,156,65, 0.8) 100%);
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.section-about__block__border {
+    width: 390px;
+    height: 160px;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 17px 0 0 28px;
+    text-align: left;
+}
+
+.section-about__title {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 9px;
+}
+
+.section-about__text {
+    font-size: 12px;
+    margin: 0;
+}
+
+.section-description__icon-box {
+    text-align: center;
+}
+
+.section-description__icon-box img {
+    margin-right: 76px;
+}
+
+.section-description__icon-box img:last-child {
+    margin-right: 0px;
+}
