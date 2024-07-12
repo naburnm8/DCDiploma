@@ -1,5 +1,7 @@
+from django.contrib.auth import logout
 from django.contrib.auth.views import LoginView
 from django.contrib.messages.views import SuccessMessageMixin
+from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 
@@ -28,3 +30,8 @@ class UserLoginView(SuccessMessageMixin, LoginView):
         context = super(UserLoginView, self).get_context_data(**kwargs)
         context['title'] = 'Страница Авторизации'
         return context
+
+
+def logout_view(request):
+    logout(request)
+    return render(request, 'products/index.html')

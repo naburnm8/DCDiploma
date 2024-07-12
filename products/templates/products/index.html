@@ -20,7 +20,7 @@
         <li> <a href="#">КОРЗИНА</a> </li>
         <li> <a href="#">АССОРТИМЕНТ</a> </li>
        {% if user.is_authenticated %}
-            <li> <a href='#'>{{ user.username }}</a></li>
+            <li> <a href='{% url 'users:logout' %}'>{{ user.username }}</a></li>
         {% else %}
             <li> <a href="{% url 'users:login' %}"> ВОЙТИ </a> </li>
         {% endif %}
