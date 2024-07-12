@@ -4,19 +4,44 @@
     <meta charset="UTF-8">
     <title>{{ title }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="../../../static/img/favicon.ico"/>
+    <link rel="stylesheet" href="../../../static/css/style-login.css">
+    <meta name="description" content="Лучшие товары в городе">
 </head>
 <body>
-     <form action="{% url 'users:login' %}" method="POST">
-         {% csrf_token %}
-         {{ form.username }}<br>
-         {{ form.password}}<br>
-         <div>
-             <input type="submit" value="Войти в аккаунт">
-         </div>
-         <div class="card-footer text-center">
-             <div class="small"><a href="{%  url 'users:registration' %}">Еще нет аккаунта? Зарегестрируйся</a></div>
-         </div>
 
-     </form>
+    <header>
+        <img class="logo" src="img/icon.svg" alt="Изображение логотипа">
+    </header>
+    <nav class="sticky-nav">
+    <ul>
+        <li> <a href="#">О НАС</a> </li>
+        <li> <a href="#">КОРЗИНА</a> </li>
+        <li> <a href="#">АССОРТИМЕНТ</a> </li>
+        <li> <a href="#">КОНТАКТЫ</a> </li>
+        <li> <a href="#">ПРОФИЛЬ</a> </li>
+    </ul>
+
+    </nav>
+    <main>
+        <section class="section-login">
+            <form class="login-form" action="{% url 'users:login' %}" method="POST">
+                {% csrf_token %}
+                {{ form.username }}<br>
+                {{ form.password}}<br>
+                <div>
+                    <input type="submit" value="Войти в аккаунт">
+                </div>
+                <div class="card-footer text-center">
+                    <div class="small"><a id="normal" href="{%  url 'users:registration' %}">Еще нет аккаунта? Зарегестрируйся</a></div>
+                </div>
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <nav></nav>
+    </footer>
+
+
 </body>
 </html>
