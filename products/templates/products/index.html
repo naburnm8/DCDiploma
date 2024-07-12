@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Магазин</title>
+    <title>Магазин выпечки</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="../../../static/css/style-index.css">
-    <meta name="description" content="Лучшие товары в городе">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../static/img/favicon.ico"/>
+    <meta name="description" content="Лучшая выпечка в городе">
+     <link rel="shortcut icon" type="image/x-icon" href="../../../static/img/favicon.ico"/>
 </head>
 <body>
     <header>
@@ -17,13 +19,11 @@
         <li> <a href="#">О НАС</a> </li>
         <li> <a href="#">КОРЗИНА</a> </li>
         <li> <a href="#">АССОРТИМЕНТ</a> </li>
-        <li> <a href="#">КОНТАКТЫ</a> </li>
-        {% if user.is_authenticated %}
+       {% if user.is_authenticated %}
             <li> <a href='#'>{{ user.username }}</a></li>
         {% else %}
             <li> <a href="{% url 'users:login' %}"> ВОЙТИ </a> </li>
-        {% endif %} 
-
+        {% endif %}
     </ul>
 
     </nav>
@@ -38,18 +38,34 @@
         </section>
         <section class="section-description">
             <div class="section-description__icon-box">
-                <img src="../../../static/img/01-Иконка.svg" alt="Первая иконка">
+                <img src="../../../static/img/01-Иконка.svg" alt="Первая иконка" alt="Первая иконка">
                 <img src="../../../static/img/02-Иконка.svg" alt="Вторая иконка">
                 <img src="../../../static/img/03-Иконка.svg" alt="Третья иконка">
             </div>
+            <div class="section-description__text-box">
+                <h2 class="section-description__title">
+                    Продукты - <span class="section-description__span">это</span> здорово
+                </h2>
+                <p class="section-description__text">
+                    svo svo svo svo svo svo svo svo
+                </p>
+            </div>
         </section>
-        <section>
+        <section class="section-map">
+            <h3 class="section-map__title">ЗАКАЗАТЬ</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.5689463396952!2d37.682435477164915!3d55.765989890974936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54aae7db2a075%3A0xfa5b51a346478c0e!2z0JzQk9Ci0KMg0LjQvC4g0J0u0K0uINCR0LDRg9C80LDQvdCw!5e0!3m2!1sru!2sru!4v1720813637363!5m2!1sru!2sru" width="900" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
     <footer>
-        <nav></nav>
+        <div class="line"></div>
+        <nav>
+            <ul>
+                <li> <a href="#">О НАС</a> </li>
+                <li> <a href="#">КОРЗИНА</a> </li>
+                <li> <a href="#">АССОРТИМЕНТ</a> </li>
+                <li> <a href="#">ПРОФИЛЬ</a> </li>
+            </ul>
+        </nav>
     </footer>
-
-
 </body>
 </html>
