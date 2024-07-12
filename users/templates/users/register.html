@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <title>{{ title }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="../../../static/img/favicon.ico"/>
+    <link rel="stylesheet" href="../../../static/css/style-register.css">
+    <meta name="description" content="Лучшие товары в городе">
 </head>
 <body>
-     <form action="{% url 'users:registration' %}" method="POST">
+    <header>
+        <img class="logo" src="../../../static/img/icon.svg" alt="Изображение логотипа">
+    </header>
+    <nav class="sticky-nav">
+    <ul>
+        <li> <a href="{% url 'products:index' %}">О НАС</a> </li>
+        <li> <a href="{% url 'products:index' %}">КОРЗИНА</a> </li>
+        <li> <a href="{% url 'products:index' %}">АССОРТИМЕНТ</a> </li>
+        <li> <a href="{% url 'products:index' %}">КОНТАКТЫ</a> </li>
+        <li> <a href="{% url 'products:index' %}">ВОЙТИ</a> </li>
+    </ul>
+
+    </nav>
+    <main>
+        <section>
+            <form class="auth-form" action="{% url 'users:registration' %}" method="POST">
          {% csrf_token %}
          {{ form.first_name}}<br>
          {{ form.last_name }}<br>
@@ -19,9 +36,11 @@
              <input type="submit" value="Создать аккаунт">
          </div>
          <div class="card-footer text-center">
-             <div class="small"><a href="{%  url 'users:login' %}">Уже есть аккаунт? Авторизоваться</a></div>
+             <div class="small"><a id="normal" href="{%  url 'users:login' %}">Уже есть аккаунт? Авторизоваться</a></div>
          </div>
+             </form>
+        </section>
+    </main>
 
-     </form>
 </body>
 </html>
