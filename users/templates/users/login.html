@@ -10,15 +10,15 @@
 <body>
 
     <header>
-        <img class="logo" src="img/icon.svg" alt="Изображение логотипа">
+        <img class="logo" src="../../../static/img/icon.svg" alt="Изображение логотипа">
     </header>
     <nav class="sticky-nav">
     <ul>
-        <li> <a href="#">О НАС</a> </li>
-        <li> <a href="#">КОРЗИНА</a> </li>
-        <li> <a href="#">АССОРТИМЕНТ</a> </li>
-        <li> <a href="#">КОНТАКТЫ</a> </li>
-        <li> <a href="#">ПРОФИЛЬ</a> </li>
+        <li> <a href="{% url 'products:index' %}">О НАС</a> </li>
+        <li> <a href="{% url 'products:index' %}">КОРЗИНА</a> </li>
+        <li> <a href="{% url 'products:index' %}">АССОРТИМЕНТ</a> </li>
+        <li> <a href="{% url 'products:index' %}">КОНТАКТЫ</a> </li>
+        <li> <a href="{% url 'products:index' %}">ПРОФИЛЬ</a> </li>
     </ul>
 
     </nav>
@@ -32,7 +32,7 @@
                     <input type="submit" value="Войти в аккаунт">
                 </div>
                 <div class="card-footer text-center">
-                    <div class="small"><a id="normal" href="{%  url 'users:registration' %}">Еще нет аккаунта? Зарегестрируйся</a></div>
+                    <div class="small"><a id="normal" href="{%  url 'users:registration' %}">Еще нет аккаунта? Зарегистрируйся</a></div>
                 </div>
 
             </form>
