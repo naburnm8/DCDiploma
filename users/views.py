@@ -10,3 +10,8 @@ class UserRegistrationView(SuccessMessageMixin, CreateView):
     form_class = UserRegistrationForm
     template_name = 'users/register.html'
     success_message = 'Поздравляем! Вы успешно зарегестрировались!'
+
+    def get_context_data(self, **kwargs):
+        context = super(UserRegistrationView, self).get_context_data(**kwargs)
+        context['title'] = 'Страница Регистрации'
+        return context

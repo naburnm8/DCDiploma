@@ -2,17 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ title }}</title>
 </head>
 <body>
-    <div>
-        {{ form.first_name}}
-        {{ form.last_name }}
-        {{ form.username }}
-        {{ form.email}}
-        {{ form.password1 }}
-        {{ form.password2}}
-        {{ form.adress }}
-    </div>>
+     <form action="{% url 'users:registration' %}" method="POST">
+         {% csrf_token %}
+         {{ form.first_name}}<br>
+         {{ form.last_name }}<br>
+         {{ form.username }}<br>
+         {{ form.email}}<br>
+         {{ form.user_address }}<br>
+         {{ form.password1 }}<br>
+         {{ form.password2}}<br>
+         <div>
+             <input type="submit" value="Создать аккаунт">
+         </div>
+
+     </form>
 </body>
 </html>
