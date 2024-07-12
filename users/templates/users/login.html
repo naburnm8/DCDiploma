@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+     <form action="{% url 'users:login' %}" method="POST">
+         {% csrf_token %}
+         {{ form.username }}<br>
+         {{ form.password}}<br>
+         <div>
+             <input type="submit" value="Войти в аккаунт">
+         </div>
+         <div class="card-footer text-center">
+             <div class="small"><a href="{%  url 'users:registration' %}">Еще нет аккаунта? Зарегестрируйся</a></div>
+         </div>
+
+     </form>
+</body>
+</html>

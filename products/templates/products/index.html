@@ -17,7 +17,12 @@
         <li> <a href="#">КОРЗИНА</a> </li>
         <li> <a href="#">АССОРТИМЕНТ</a> </li>
         <li> <a href="#">КОНТАКТЫ</a> </li>
-        <li> <a href="#">ПРОФИЛЬ</a> </li>
+        {% if user.is_authenticated %}
+            <li> <a href='#'>{{ user.username }}</a></li>
+        {% else %}
+            <li> <a href="{% url 'users:login' %}"> Войти </a> </li>
+        {% endif %} 
+
     </ul>
 
     </nav>
