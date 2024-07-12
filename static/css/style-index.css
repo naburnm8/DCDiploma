@@ -1,8 +1,13 @@
+@font-face {
+    font-family: UtromPressKachat; src: url("fonts/UtromPressKachat.ttf");
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
+    font-family: UtromPressKachat, serif;
     background-color: #FFE2B0;
 }
 
