@@ -24,7 +24,7 @@ class UserRegistrationForm(UserCreationForm):
     email = forms.CharField(widget=forms.EmailInput(attrs={
         'class': 'form-control py-4', 'placeholder': 'Введите почту', 'unique': True}))
     user_address = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'form-control py-4', 'placeholder': 'Введите адресс'}))
+        'class': 'form-control py-4', 'placeholder': 'Введите адрес'}))
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control py-4', 'placeholder': 'Введите пароль'}))
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={
