@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="../../../static/css/style-index.css">
     <meta name="description" content="Лучшая выпечка в городе">
-     <link rel="shortcut icon" type="image/x-icon" href="../../../static/img/favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../static/img/favicon.ico"/>
 </head>
 <body>
     <header>
@@ -19,11 +19,12 @@
         <li> <a href="#">О НАС</a> </li>
         <li> <a href="#">КОРЗИНА</a> </li>
         <li> <a href="#">АССОРТИМЕНТ</a> </li>
-       {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
             <li> <a href='{% url 'users:logout' %}'>{{ user.username }}</a></li>
         {% else %}
             <li> <a href="{% url 'users:login' %}"> ВОЙТИ </a> </li>
         {% endif %}
+
     </ul>
 
     </nav>

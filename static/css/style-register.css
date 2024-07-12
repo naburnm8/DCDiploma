@@ -82,3 +82,40 @@ nav {
 .auth-form {
     text-align: center;
 }
+
+input[type=text] {
+    height: 40px;
+    width: 300px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background-color: #FFE2B0;
+    border: 2px solid black;
+    font-family: UtromPressKachat;
+}
+
+input[type=email] {
+    height: 40px;
+    width: 300px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background-color: #FFE2B0;
+    border: 2px solid black;
+    font-family: UtromPressKachat;
+}
+
+input[type=password] {
+    height: 40px;
+    width: 300px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background-color: #FFE2B0;
+    border: 2px solid black;
+    font-family: UtromPressKachat;
+}
+
+input[type=submit] {
+    margin-bottom: 40px;
+    border: 2px solid black;
+    background-color: #FFE2B0;
+    font-family: UtromPressKachat;
+}
