@@ -14,7 +14,7 @@ def index(request):
 
 
 def category(request, category_id=None):
-    products = Product.objects.filter(category=category_id) if category_id else Product.objects.all()
+    products = Product.objects.filter(category=category_id) if category_id or category_id != 0 else Product.objects.all()
     context = {
         'title': 'SKUFF DELIVERY',
         'products': products,
