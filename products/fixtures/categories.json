@@ -1,0 +1,1 @@
+[{"model": "products.category", "pk": 1, "fields": {"name": "Мясное", "description": "Мясное"}}, {"model": "products.category", "pk": 2, "fields": {"name": "Мучное", "description": "Булочки пирожочки батончики ммм"}}, {"model": "products.category", "pk": 3, "fields": {"name": "Молочное", "description": "Homelander"}}]

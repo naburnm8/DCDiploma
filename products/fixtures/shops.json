@@ -1,0 +1,1 @@
+[{"model": "products.shop", "pk": 1, "fields": {"name": "Мираторг", "description": "тут недорогое мясо", "address": "улица пушкина дом колотушкина"}}, {"model": "products.shop", "pk": 2, "fields": {"name": "sexshop", "description": "zzzsvo", "address": "zzzsvo"}}]
