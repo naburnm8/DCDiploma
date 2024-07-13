@@ -1,45 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../../../static/img/favicon.ico"/>
-    <link rel="stylesheet" href="../../../static/css/style-register.css">
-    <meta name="description" content="Лучшие товары в городе">
-</head>
-<body>
-    <header>
-        <img class="logo" src="../../../static/img/icon.svg" alt="Изображение логотипа">
-    </header>
-    <nav class="sticky-nav">
-    <ul>
-        <li> <a href="{% url 'products:index' %}">О НАС</a> </li>
-        <li> <a href="{% url 'products:index' %}">КОРЗИНА</a> </li>
-        <li> <a href="{% url 'products:index' %}">АССОРТИМЕНТ</a> </li>
-        <li> <a href="{% url 'products:index' %}">ВОЙТИ</a> </li>
-    </ul>
-
-    </nav>
-    <main>
-        <section>
+{% extends 'users/base.html' %}
+{% block content %}
+	<section>
             <form class="auth-form" action="{% url 'users:registration' %}" method="POST">
-         {% csrf_token %}
-         {{ form.first_name}}<br>
-         {{ form.last_name }}<br>
-         {{ form.username }}<br>
-         {{ form.email}}<br>
-         {{ form.user_address }}<br>
-         {{ form.password1 }}<br>
-         {{ form.password2}}<br>
-         <div>
-             <input type="submit" value="Создать аккаунт">
-         </div>
-         <div class="card-footer text-center">
-             <div class="small"><a id="normal" href="{%  url 'users:login' %}">Уже есть аккаунт? Авторизоваться</a></div>
-         </div>
+                 {% csrf_token %}
+                 {{ form.first_name}}<br>
+                 {{ form.last_name }}<br>
+                 {{ form.username }}<br>
+                 {{ form.email}}<br>
+                 {{ form.user_address }}<br>
+                 {{ form.password1 }}<br>
+                 {{ form.password2}}<br>
+                 <div>
+                     <input type="submit" value="Создать аккаунт">
+                 </div>
+                 <div class="card-footer text-center">
+                     <div class="small"><a id="normal" href="{%  url 'users:login' %}">Уже есть аккаунт? Авторизоваться</a></div>
+                 </div>
              </form>
-        </section>
-    </main>
+    </section>
+{% endblock %}
 
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
