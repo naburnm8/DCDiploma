@@ -11,9 +11,9 @@
                         <div class="small"><a id="normal"
                         href="{% url 'products:basket_remove' basket.id%}">Удалить товар из корзины</a></div>
                     </div>
-                    <div>Итого товаров {{ baskets.total_quantity }}шт. на сумму {{ baskets.total_sum }}р.</div>
-
                 {% endfor %}
+                <div>Итого товаров {{ baskets.total_quantity }}шт. на сумму {{ baskets.total_sum }}р.</div>
+                <div><a id="normal" href="#">Перейти к оплате</a></div>
             {% else %}
                 <h1> Корзина пуста</h1>
             {% endif %}
