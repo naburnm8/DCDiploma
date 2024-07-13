@@ -1,0 +1,22 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+	<section class="section-login">
+            {% if baskets %}
+                {% for basket in baskets %}
+                    {{ basket.product.name }}
+                    {{ basket.quantity }}
+                    {{ basket.sum }}
+                    <div class="card-footer text-center">
+                        <div class="small"><a id="normal"
+                        href="{% url 'products:basket_remove' basket.id%}">Удалить товар из корзины</a></div>
+                    </div>
+                    <div>Итого товаров {{ baskets.total_quantity }}шт. на сумму {{ baskets.total_sum }}р.</div>
+
+                {% endfor %}
+            {% else %}
+                <h1> Корзина пуста</h1>
+            {% endif %}
+
+    </section>
+{% endblock %}
