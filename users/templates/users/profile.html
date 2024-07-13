@@ -23,7 +23,7 @@
     </nav>
     <main>
         <section class="section-login">
-            <form class="login-form" action="{% url 'users:login' %}" method="POST">
+            <form action="{% url 'users:profile' user.id %}" method="POST">
                 {% csrf_token %}
                 {{ form.first_name }}<br>
                 {{ form.last_name }}<br>
