@@ -52,6 +52,7 @@
                 </p>
             </div>
         </section>
+    {% if user.is_authenticated %}
                 <div>
                     <h1>Категории: </h1>
                         {% for category in categories %}
@@ -82,7 +83,7 @@
                             </div>
                         </div>
                     {% endfor %}
-
+{% endif %}
                 </div>
         <section class="section-map">
             <h3 class="section-map__title">ЗАКАЗАТЬ</h3>
