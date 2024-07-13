@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../static/img/favicon.ico"/>
+    <link rel="stylesheet" href="../../../static/css/style-login.css">
+    <meta name="description" content="Лучшие товары в городе">
+</head>
+<body>
+
+    <header>
+        <img class="logo" src="../../../static/img/icon.svg" alt="Изображение логотипа">
+    </header>
+    <nav class="sticky-nav">
+    <ul>
+        <li> <a href="{% url 'products:index' %}">О НАС</a> </li>
+        <li> <a href="{% url 'products:index' %}">КОРЗИНА</a> </li>
+        <li> <a href="{% url 'products:index' %}">АССОРТИМЕНТ</a> </li>
+        <li> <a href="{% url 'products:index' %}">ВОЙТИ</a> </li>
+    </ul>
+
+    </nav>
+    <main>
+        <section class="section-login">
+            <form class="login-form" action="{% url 'users:login' %}" method="POST">
+                {% csrf_token %}
+                {{ form.first_name }}<br>
+                {{ form.last_name }}<br>
+                {{ form.username }}<br>
+                {{ form.email }}<br>
+                {{ form.user_address }}<br>
+
+                <div>
+                    <input type="submit" value="Svохранить">
+                </div>
+                <div>
+                    <div class="small"><a id="normal" href="{%  url 'users:logout' %}">Выйти из аккаунта</a></div>
+                </div>
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <nav></nav>
+    </footer>
+
+
+</body>
+</html>

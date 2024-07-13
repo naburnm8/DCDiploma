@@ -3,9 +3,9 @@ from django.contrib.auth.views import LoginView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 
-from users.forms import UserRegistrationForm, UserLoginForm
+from users.forms import UserRegistrationForm, UserLoginForm, UserProfileForm
 from users.models import User
 
 
@@ -35,3 +35,15 @@ class UserLoginView(SuccessMessageMixin, LoginView):
 def logout_view(request):
     logout(request)
     return render(request, 'products/index.html')
+
+class UserProfileView(UpdateView):
+    model = User
+    form_class = UserProfileForm
+    template_name = 'users/profile.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(UserProfileView, self).get_context_data(**kwargs)
+        context['title'] = 'Личный кабинет'
+        return context
+    def get_success_url(self):
+        return reverse_lazy('users:profile', args=(self.object.id,))
