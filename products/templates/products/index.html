@@ -18,7 +18,7 @@
     <ul>
         <li> <a href="#">О НАС</a> </li>
         <li> <a href="#">КОРЗИНА</a> </li>
-        <li> <a href="#">АССОРТИМЕНТ</a> </li>
+        <li> <a href="{% url 'products:index' %}">АССОРТИМЕНТ</a> </li>
         {% if user.is_authenticated %}
             <li> <a href='{% url 'users:profile' user.id %}'>{{ user.username }}</a></li>
         {% else %}
@@ -52,6 +52,12 @@
                 </p>
             </div>
         </section>
+                <div>
+                    <h1>Категории: </h1>
+                        {% for category in categories %}
+                            <a href="{% url 'products:category' category.id %}">{{ category.name }}</a>
+                        {% endfor %}
+                </div>
                 <div >
                     {% for product in products %}
                         <div>
