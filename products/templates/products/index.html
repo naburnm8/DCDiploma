@@ -17,7 +17,12 @@
     <nav class="sticky-nav">
     <ul>
         <li> <a href="#">О НАС</a> </li>
-        <li> <a href="{% url 'products:basket_view' %}">КОРЗИНА</a> </li>
+        {% if user.is_authenticated %}
+            <li> <a href="{% url 'products:basket_view' %}">КОРЗИНА</a> </li>
+        {% else %}
+            <li> <a href="{% url 'users:login' %}">КОРЗИНА</a> </li>
+        {% endif %}
+
         <li> <a href="{% url 'products:index' %}">АССОРТИМЕНТ</a> </li>
         {% if user.is_authenticated %}
             <li> <a href='{% url 'users:profile' user.id %}'>{{ user.username }}</a></li>
