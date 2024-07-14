@@ -22,8 +22,8 @@ class SuccessTemplateView(TemplateView):
     template_name = 'cart/success.html'
 
 
-class CanselTemplateView(TemplateView):
-    template_name = 'cart/cansel.html'
+class CancelTemplateView(TemplateView):
+    template_name = 'cart/cancel.html'
 
 
 class OrderView(CreateView):
@@ -46,7 +46,7 @@ class OrderView(CreateView):
             line_items=line_items,
             mode='payment',
             success_url='{}{}'.format(settings.DOMAIN_NAME, reverse('cart:success_order')),
-            cancel_url='{}{}'.format(settings.DOMAIN_NAME, reverse('cart:cansel_order')),
+            cancel_url='{}{}'.format(settings.DOMAIN_NAME, reverse('cart:cancel_order')),
         )
         return HttpResponseRedirect(checkout_session.url, status=HTTPStatus.SEE_OTHER)
 
