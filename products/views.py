@@ -3,7 +3,6 @@ from django.shortcuts import render
 from products.models import Product, Category, Basket
 
 
-
 def index(request):
     context = {
         'title': 'SKUFF DELIVERY',

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../static/img/favicon.ico"/>
+    <link rel="stylesheet" href="../../../static/css/style-login.css">
+    <meta name="description" content="Лучшие товары в городе">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../static/img/favicon.ico"/>
+</head>
+<body>
+
+    <header>
+        <img class="logo" src="../../../static/img/icon.svg" alt="Изображение логотипа">
+    </header>
+    <nav class="sticky-nav">
+    <ul>
+        <li> <a href="{% url 'products:index' %}">О НАС</a> </li>
+        <li> <a href="{% url 'products:index' %}">КОРЗИНА</a> </li>
+        <li> <a href="{% url 'products:index' %}">АССОРТИМЕНТ</a> </li>
+        {% if user.is_authenticated %}
+            <li> <a href='{% url 'users:profile' user.id %}'>{{ user.username }}</a></li>
+        {% else %}
+            <li> <a href="{% url 'users:login' %}"> ВОЙТИ </a> </li>
+        {% endif %}
+    </ul>
+
+    </nav>
+    <main>
+        {% block content %} {% endblock %}
+    </main>
+    <footer>
+        <nav></nav>
+    </footer>
+
+
+</body>
+</html>

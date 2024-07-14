@@ -13,7 +13,7 @@
                     </div>
                 {% endfor %}
                 <div>Итого товаров {{ baskets.total_quantity }}шт. на сумму {{ baskets.total_sum }}р.</div>
-                <div><a id="normal" href="#">Перейти к оплате</a></div>
+                <div><a id="normal" href="{% url 'cart:order_view' %}">Перейти к оплате</a></div>
             {% else %}
                 <h1> Корзина пуста</h1>
             {% endif %}

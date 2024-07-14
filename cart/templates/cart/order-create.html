@@ -1,0 +1,32 @@
+{% extends 'cart/base.html' %}
+{% block content %}
+    <section>
+        <div>
+            Пожалуйста, заполните адрес.
+        </div>
+        <div>
+            <div>
+                <h1>Оформление заказа</h1>
+            </div>
+            <form action="{% url 'cart:order_view' %}" method="post">
+                {% csrf_token %}
+            <div>
+                <div>
+
+                    <span>Сумма к оплате</span>
+                    <strong>{{ baskets.total_sum }} руб.</strong>
+                </div>
+
+                <div>
+                    <div>
+                        <label for="{{ form.email.address }}">Адрес</label>
+                        {{ form.address }}
+                    </div>
+                </div>
+                        <button type="submit">Продолжить</button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+{% endblock %}
