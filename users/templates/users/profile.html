@@ -1,4 +1,5 @@
 {% extends 'users/base.html' %}
+
 {% block content %}
 	<section class="section-login">
             <form action="{% url 'users:profile' user.id %}" method="POST">
