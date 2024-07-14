@@ -52,7 +52,7 @@
                 </p>
             </div>
         </section>
-    {% if user.is_authenticated %}
+
                 <div>
                     <h1>Категории: </h1>
                         {% for category in categories %}
@@ -74,16 +74,25 @@
                                     <h5 class="section-description__text">{{ product.price }} руб.</h5>
                                     <p class="section-description__text">{{ product.description }}</p>
                                 </div>
+                                {% if user.is_authenticated %}
                                 <div>
                                     <a class="section-description__text"
                                        href="{% url 'products:basket_add' product.id%}">
                                         Отправить в корзину
                                     </a>
                                 </div>
+                                {% else %}
+                                    <div>
+                                    <a class="section-description__text"
+                                       href="{% url 'users:login'%}">
+                                        Отправить в корзину
+                                    </a>
+                                </div>
+                                {% endif %}
                             </div>
                         </div>
                     {% endfor %}
-{% endif %}
+
                 </div>
         <section class="section-map">
             <h3 class="section-map__title">ЗАКАЗАТЬ</h3>
