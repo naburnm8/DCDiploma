@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:sqlite:C:\Users\Семён\PycharmProjects\dj_rem\store\ssstore\db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="postgres@localhost" uuid="099f9a0e-c988-44cf-9377-efdf4e7e2b9d">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:1488/postgres</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
