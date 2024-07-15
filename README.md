@@ -11,7 +11,6 @@
 3) python -Xutf8 .\manage.py loaddata products/fixtures/products.json 
 
 # DOCKER
-ПРИМЕЧАНИЕ: прежде чем запускать контейнер, поменяйте в settings.py доменное имя на своё.
 1) Склонируйте эту ветку.
 2) Установите Docker для Вашей ОС. (Я использовал Windows)
 
