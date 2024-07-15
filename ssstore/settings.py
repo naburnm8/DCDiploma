@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '83.221.21.172', 'web', '0.0.0.0']
 
-DOMAIN_NAME = 'http://127.0.0.1:8000'
+DOMAIN_NAME = 'http://83.221.21.172:8000'
 
 # Application definition
 
